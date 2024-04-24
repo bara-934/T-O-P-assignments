@@ -19,7 +19,11 @@ function playRound(humanChoice, computerChoice){
     
 }
 
-function rockPaperScissors(rounds = parseInt(prompt("How many rounds do you anna play against me?: "))){
+function rockPaperScissors(rounds = parseInt(prompt("First to ?: (10 max) "))){
+    if (rounds > 10){
+        console.log("to much rounds required. Choose a number beetween 1 and 10");
+        rockPaperScissors();
+    }
     while( humanScore < rounds && computerScore < rounds){
         let humanChoice = prompt("rock, paper, or scissors? ").toLowerCase();
         while( humanChoice!== 'rock' && humanChoice!== 'paper'&& humanChoice!== 'scissors'){
