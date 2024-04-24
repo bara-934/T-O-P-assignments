@@ -19,10 +19,10 @@ function playRound(humanChoice, computerChoice){
     
 }
 
-function rockPaperScissors(rounds = parseInt(prompt("First to ?: (10 max) "))){
+function playGame(rounds = parseInt(prompt("First to ?: (10 max) "))){
     if (rounds > 10){
         console.log("to much rounds required. Choose a number beetween 1 and 10");
-        rockPaperScissors();
+        playGame();
     }
     while( humanScore < rounds && computerScore < rounds){
         let humanChoice = prompt("rock, paper, or scissors? ").toLowerCase();
