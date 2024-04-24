@@ -1,4 +1,5 @@
-console.log("Hello World!")
+console.log("Let's play!")
+console.log("enter 'playGame()' below :")
 
 let humanScore = 0, computerScore = 0;
 
