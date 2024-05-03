@@ -1,0 +1,19 @@
+body{
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px ;
+    align-items: center;
+}
+
+.container{
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+}
+
+button.prompt{
+    padding: 20px;
+}
