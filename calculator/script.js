@@ -1,7 +1,7 @@
 const add = (x,y) => x + y;
 const multiply = (x,y) => x * y;
 const subtract = (x,y) => x - y;
-const divide = (x,y) => x / y;
+const divide = (x,y) =>(y !== 0)? x / y: display.textContent = 'NaN. Could not divide by 0';
 
 let number1;
 let number2;
@@ -37,13 +37,32 @@ buttons.forEach((button) => {
             {
                 display.textContent = 'Enter the operation';
             }
-            else display.textContent =  calculate(display.textContent);
+            else display.textContent =  `${calculate(display.textContent.split(' '))}`;
         }
 
     })
 });
 
-function calculate(string){
-    arr = string.split(" ");
-    return operate(Number(arr[0]),arr[1],Number(arr[2]))
+function calculate(splitted){
+    if (splitted.at(-1) === '*' || splitted.at(-1) === '/' )
+    {
+        splitted.push(1);
+    }
+    if (splitted.at(0) === '*' || splitted.at(0) === '/' )
+    {
+        splitted.unshift(1);
+    }
+    if (splitted.at(-1) === '+' || splitted.at(-1) === '-' )
+    {
+        splitted.push(0);
+    }
+    if (splitted.at(0) === '+' || splitted.at(0) === '-' )
+    {
+        splitted.unshift(0);
+    }
+
+    if(splitted.length === 3){
+        return operate(Number(splitted[0]),splitted[1],Number(splitted[2]));
+    }
+    else return calculate(splitted.slice(3).unshift(calculate(splitted.slice(0,3))));
 }
