@@ -26,15 +26,18 @@ body *{
 
 .down{
     display: flex;
+    gap :20px;
 }
 
-.left{
+.down>div{
     display: flex;
+    gap: 20px;
     flex-direction: column;
 }
-.down div{
-    gap: 25px;
+.left div {
+    gap: 20px;
 }
+
 
 .buttons{
     display: flex;
@@ -46,5 +49,21 @@ button{
     flex: 0 1 50px;
 }
 div.equal{display: flex;}
-button.equal{
+
+.right button, .specials button{
+    background: #043517;
+    color: antiquewhite;
+}
+
+#lastRow{
+    display: flex;
+}
+.specials{
+    display: flex;
+}
+
+#clear{
+    text-align: center;
+    box-sizing: content-box;
+    padding: 20px 11.5px;
 }
