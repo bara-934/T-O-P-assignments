@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body *{
+    box-sizing: border-box;
+}
+
+.container{
+    border: 3px solid green;
+    width: 400px ;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 30px;
+    background: #80ba77;
+}
+
+.screen{
+    min-height: 200px;
+    border: 2px solid black;
+    background: #a29d9d;
+}
+
+.down{
+    display: flex;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+}
+.down div{
+    gap: 25px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button{
+    padding:20px;
+    flex: 0 1 50px;
+}
+div.equal{display: flex;}
+button.equal{
+}
