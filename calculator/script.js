@@ -64,5 +64,9 @@ function calculate(splitted){
     if(splitted.length === 3){
         return operate(Number(splitted[0]),splitted[1],Number(splitted[2]));
     }
-    else return calculate(splitted.slice(3).unshift(calculate(splitted.slice(0,3))));
+    else{
+        const copySplitted = splitted.slice(3);
+        copySplitted.unshift(calculate(splitted.slice(0,3)));
+        return calculate(copySplitted);    
+    }
 }
