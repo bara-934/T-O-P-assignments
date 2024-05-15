@@ -41,7 +41,7 @@ document.querySelectorAll('.specials').forEach((signs)=>{
     signs.addEventListener('click',(e)=>{
         const button = e.target;
         if(button.id === 'clear') {
-            display.textContent = 'Enter the operation';
+            display.textContent = '0';
             number1 = undefined;
             displayVal = 0;
         }
@@ -56,6 +56,10 @@ document.querySelectorAll('.specials').forEach((signs)=>{
             number1 = displayVal;
             operator = button.id;
             displayVal = 0;
+        }
+        else if (operator === 'equal')
+        {
+            operator = button.id;
         }
         else{
             clear();
