@@ -8,42 +8,48 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <div class="screen up">Enter the operation</div>
-        <div class="down">
-            <div class="left">
-                <div class="buttons digits">
-                    <button id="1" >1</button>
-                    <button id="2">2</button>
-                    <button id="3">3</button>
-                </div>
-                <div class="buttons digits">
-                    <button id="4">4</button>
-                    <button id="5">5</button>
-                    <button id="6">6</button>
-                </div>
-                <div class="buttons digits">
-                    <button id="7">7</button>
-                    <button id="8">8</button>
-                    <button id="9">9</button>
-                </div>
-                <div id="lastRow">
-                    <div class="digits">
-                        <button id="0">0</button>
+    <main>    
+        <div class="container">
+            <div class="screen up">Enter the operation</div>
+            <div class="down">
+                <div class="left">
+                    <div class="buttons digits">
+                        <button id="1" >1</button>
+                        <button id="2">2</button>
+                        <button id="3">3</button>
                     </div>
-                    <div class="specials">
-                        <button id="clear">clear</button>
-                        <button id="equal">=</button>
+                    <div class="buttons digits">
+                        <button id="4">4</button>
+                        <button id="5">5</button>
+                        <button id="6">6</button>
+                    </div>
+                    <div class="buttons digits">
+                        <button id="7">7</button>
+                        <button id="8">8</button>
+                        <button id="9">9</button>
+                    </div>
+                    <div id="lastRow">
+                        <div class="digits">
+                            <button id="0">0</button>
+                        </div>
+                        <div class="specials">
+                            <button id="clear">clear</button>
+                            <button id="equal">=</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="right specials">
-                <button id="+">+</button>
-                <button id="-">-</button>
-                <button id="x">x</button>
-                <button id="/">/</button>
+                <div class="right">
+                    <div id = 'operators' class="specials">
+                        <button id="+">+</button>
+                        <button id="-">-</button>
+                        <button id="x">x</button>
+                        <button id="/">/</button>
+                        <button id=".">.</button>
+                    </div>
+
+                </div>
             </div>
         </div>
-    </div>
+    </main>
 </body>
 </html>

@@ -45,12 +45,19 @@ document.querySelectorAll('.specials').forEach((signs)=>{
             number1 = undefined;
             displayVal = 0;
         }
+        else if (button.id === '.')
+        {
+            if(! display.textContent.includes('.'))
+            {
+                updateDisplay('.');
+            }
+        }
         else if(number1 === undefined) {
             number1 = displayVal;
             operator = button.id;
             displayVal = 0;
         }
-        else {
+        else{
             clear();
             number2 = displayVal;
             number1 = operate(number1, operator, number2);

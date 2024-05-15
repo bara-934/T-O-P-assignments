@@ -7,15 +7,24 @@ body *{
     box-sizing: border-box;
 }
 
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+    height: 100vh;
+
+}
 .container{
     border: 3px solid green;
+    border-radius: 10px;
     width: 350px ;
-    min-height: 600px;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 30px;
-    padding: 30px;
+    gap: 20px;
+    padding: 10px 20px;
     background: #80ba77;
 }
 
@@ -28,12 +37,14 @@ body *{
     font-weight: 600;
     font-size: 2rem;
     border: 2px solid black;
+    border-radius: 5px;
     background: #a29d9d;
     padding-right: 5px;
 }
 
 .down{
     display: flex;
+    justify-content: center;
     gap :20px;
 }
 
@@ -53,8 +64,11 @@ body *{
 }
 
 button{
-    padding:20px;
+    font-size:larger ;
+    font-weight: 400;
+    padding:15px;
     flex: 0 1 50px;
+    border-radius: 40px 20px 40px 40px;
 }
 div.equal{display: flex;}
 
@@ -69,6 +83,14 @@ div.equal{display: flex;}
 }
 .specials{
     display: flex;
+}
+#lastRow{
+    align-items: center;
+}
+#operators{
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 #clear{
