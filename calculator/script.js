@@ -32,7 +32,7 @@ function updateDisplay(digit)
 
 document.querySelectorAll('.digits').forEach((digit)=>{
     digit.addEventListener('click', (e)=> {
-        updateDisplay(e.target.id);
+        updateDisplay(e.target.textContent);
     })
 })
     
@@ -40,12 +40,23 @@ document.querySelectorAll('.digits').forEach((digit)=>{
 document.querySelectorAll('.specials').forEach((signs)=>{
     signs.addEventListener('click',(e)=>{
         const button = e.target;
-        if(button.id === 'clear') {
+        if(button.id === 'backspace')
+        {
+            if(display.textContent.length > 0)
+            {
+                display.textContent = displayVal.toString().slice(0,display.textContent.length - 1);
+                if(display.textContent.length === 0)
+                {
+                    updateDisplay(0);
+                }
+            }
+        }
+        else if(button.id === 'clear') {
             display.textContent = '0';
             number1 = undefined;
             displayVal = 0;
         }
-        else if (button.id === '.')
+        else if (button.id === 'decimal')
         {
             if(! display.textContent.includes('.'))
             {
