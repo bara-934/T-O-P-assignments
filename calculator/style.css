@@ -85,7 +85,7 @@ button{
     border-radius: 40px 20px 40px 40px;
 }
 
-.right button, .specials button{
+.right button, .specials button, button.specials{
     background: #043517;
     color: antiquewhite;
 }
